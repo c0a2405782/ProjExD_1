@@ -6,6 +6,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
 def main():
+    x=0
     pg.display.set_caption("はばたけ！こうかとん")
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
@@ -17,7 +18,9 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        x= tmr
+        screen.blit(bg_img, [-x,0])
+        screen.blit(bg_img,[-x+1600,0])
         screen.blit(kk_img,[300,200])
         pg.display.update()
         tmr += 1        
